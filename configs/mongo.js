@@ -3,7 +3,7 @@
 import mongoose from "mongoose";
 
 export const dbConnection = async () => {
-    try {
+    try{
         mongoose.connection.on('error', ()=>{
             console.log('MongoDB | Could not be connected to MongoDB');
             mongoose.disconnect();
@@ -12,22 +12,22 @@ export const dbConnection = async () => {
             console.log('MongoDB | Try connecting');
         });
         mongoose.connection.on('connected', ()=>{
-            console.log('MongoDB | Connected to MongoDB');
+            console.log('MongoDB | connected to MongoDB');
         });
         mongoose.connection.on('open', ()=>{
-            console.log('MongoDB | Connected to database');
+            console.log('MongoDB | connected to database');
         });
         mongoose.connection.on('reconnected', ()=>{
-            console.log('MongoDB | Reconnected to MongoDB');
+            console.log('MongoDB | reconnected to MongoDB');
         });
         mongoose.connection.on('disconnected', ()=>{
-            console.log('MongoDB | Disconnected');
+            console.log('MongoDB | disconnected');
         });
         mongoose.connect(process.env.URI_MONGO, {
             serverSelectionTimeoutMS: 5000,
             maxPoolSize: 50,
         });
-    } catch (error) {
+    }catch(error){
         console.log('Database connection failed', error);
     }
 }
