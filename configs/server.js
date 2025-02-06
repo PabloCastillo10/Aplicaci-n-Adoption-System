@@ -11,6 +11,7 @@ import userRoutes from '../src/users/user.routes.js';
 import petRoutes from '../src/pet/pet.routes.js'
 
 
+
 const middlewares = (app) => {
     app.use(express.urlencoded({ extended: false }));
     app.use(cors());

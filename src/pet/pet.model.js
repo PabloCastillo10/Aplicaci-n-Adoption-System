@@ -1,164 +1,35 @@
-import { Schema,  model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const PetSchema = Schema({
     name: {
         type: String,
-        required: true
+        required: true,
     },
     description: {
         type: String,
-        required: true
+        required: true,
     },
-    age : {
+    age: {
         type: Number,
-        required: true
+        required: true,
     },
     type: {
         type: String,
-        uppercase: true,
-        required: true
+        upprcase: true,
+        required: true,
     },
-    keeper : {
+    keeper: {
         type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
+        ref: 'user',
+        required: true,
     },
-    status : {
+    status: {
         type: Boolean,
         default: true
     }
-},
-    {
+}, {
         timestamps: true,
         versionKey: false
-    
-    });
-    
+});
+
 export default model('Pet', PetSchema);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//hueco
