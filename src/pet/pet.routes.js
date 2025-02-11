@@ -1,8 +1,9 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { getPets, savePet, searchPet, deletePet } from "./pet.controller.js";
+import { savePet, getPets, searchPet, updatePet, deletePet, truePet } from "./pet.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
+import { tieneRole } from "../middlewares/validar-roles.js";
 
 const router = Router();
 
@@ -10,7 +11,7 @@ router.post(
     "/",
     [
         validarJWT,
-        check('email', 'Este no es un email válido').not().isEmpty(),
+        check('email', 'Este no es un correo válido').not().isEmpty(),
         validarCampos
     ],
     savePet
@@ -19,23 +20,46 @@ router.post(
 router.get("/", getPets)
 
 router.get(
-    "/:id",
+    "/:id", 
     [
-        check("id", "No es un ID válido").isMongoId(),
         validarJWT,
+        check("id", "No es ID válido").isMongoId(),
         validarCampos
     ],
     searchPet
 )
 
-router.delete(
+router.put(
     "/:id",
     [
         validarJWT,
-        check("id", "No es un ID válido").isMongoId(),
+        check("id", "No es ID válido").isMongoId(),
+        validarCampos
+    ],
+    updatePet
+)
+
+
+router.delete(
+    "/:id", 
+    [
+        validarJWT,
+        tieneRole("ADMIN_ROLE", "VENTAS_ROLE"),
+        check("id", "No es ID válido").isMongoId(),
         validarCampos
     ],
     deletePet
+)
+
+router.put(
+    "/activate/:id", 
+    [
+        validarJWT,
+        tieneRole("ADMIN_ROLE", "VENTAS_ROLE"),
+        check("id", "No es ID válido").isMongoId(),
+        validarCampos
+    ],
+    truePet
 )
 
 export default router;

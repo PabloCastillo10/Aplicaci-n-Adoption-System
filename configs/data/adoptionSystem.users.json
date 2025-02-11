@@ -35,7 +35,7 @@
     "$date": "2025-02-10T17:32:12.265Z"
   },
   "updatedAt": {
-    "$date": "2025-02-10T17:32:12.265Z"
+    "$date": "2025-02-11T04:20:31.717Z"
   }
 },
 {
@@ -116,5 +116,45 @@
   },
   "updatedAt": {
     "$date": "2025-02-10T17:48:53.233Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aaa6fbb418bc486a388e92"
+  },
+  "name": "Moises",
+  "surname": "Castillo",
+  "username": "mcastillo",
+  "email": "mcastillo@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$pVn7/xXKfCn/QtTYkyZqww$pn2wVuv4PHj6xw6ACezlxS1w6BmCQToVqCIC5n/weUw",
+  "profilePicture": null,
+  "phone": "02020202",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-11T01:25:15.169Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T01:25:15.169Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aacd1c65bbfe1bc46ace53"
+  },
+  "name": "Esdras",
+  "surname": "Castillo",
+  "username": "ecastillo",
+  "email": "ecastillo@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$zj/XS90jCJ1Y1rhyMOWADw$BpRyH38Odm3kbulOmzP++XDq/Mw/XuHINr1x9SAO5qI",
+  "profilePicture": null,
+  "phone": "02020202",
+  "role": "ADMIN_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-11T04:07:56.212Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T04:07:56.212Z"
   }
 }]

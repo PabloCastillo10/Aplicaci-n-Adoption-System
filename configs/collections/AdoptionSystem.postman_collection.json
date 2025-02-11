@@ -10,74 +10,6 @@
 			"name": "Users",
 			"item": [
 				{
-					"name": "http://localhost:8001/adoptionSystem/v1/auth/register",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Jose\",\r\n    \"surname\" : \"Andres\",\r\n    \"username\" : \"Jandres\",\r\n    \"email\" : \"Jandres@gmail.com\",\r\n    \"password\" : \"02020202\",\r\n    \"profilePicture\" : \"\",\r\n    \"phone\" : \"02020202\",\r\n    \"role\" : \"USER_ROLE\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8001/adoptionSystem/v1/auth/register",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8001",
-							"path": [
-								"adoptionSystem",
-								"v1",
-								"auth",
-								"register"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "http://localhost:8001/adoptionSystem/v1/auth/login",
-					"request": {
-						"auth": {
-							"type": "noauth"
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"pcastillo@gmail.com\",\r\n    \"password\" : \"02020202\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8001/adoptionSystem/v1/auth/login",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8001",
-							"path": [
-								"adoptionSystem",
-								"v1",
-								"auth",
-								"login"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "http://localhost:8001/adoptionSystem/v1/users/67aa37f04d63e4b62f326e46",
 					"request": {
 						"auth": {
@@ -181,12 +113,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhM2JjMDRkNjNlNGI2MmYzMjZlNjUiLCJpYXQiOjE3MzkyMDk2OTEsImV4cCI6MTczOTIxMzI5MX0.4T4IJvwwP9p00pz9hazl8KpieIRufmIrjZxvLZAv9sE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMzgxYzRkNjNlNGI2MmYzMjZlNGEiLCJpYXQiOjE3MzkyNDYzODAsImV4cCI6MTczOTI0OTk4MH0.bIokRNHN1VnFTsbkjMdzXBq5ELTFg8I75esqNoXJ02I",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8001/adoptionSystem/v1/users/67aa3bc04d63e4b62f326e65",
+							"raw": "http://localhost:8001/adoptionSystem/v1/users/67aa381c4d63e4b62f326e4a",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -196,7 +128,39 @@
 								"adoptionSystem",
 								"v1",
 								"users",
-								"67aa3bc04d63e4b62f326e65"
+								"67aa381c4d63e4b62f326e4a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/users/activate/67aa381c4d63e4b62f326e4a",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhY2QxYzY1YmJmZTFiYzQ2YWNlNTMiLCJpYXQiOjE3MzkyNDY4OTAsImV4cCI6MTczOTI1MDQ5MH0.QED-QmKWnPP6MOiACssa3R5VHWLHB2nPYRAxMmnHdJs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/users/activate/67aa381c4d63e4b62f326e4a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"users",
+								"activate",
+								"67aa381c4d63e4b62f326e4a"
 							]
 						}
 					},
@@ -206,7 +170,280 @@
 		},
 		{
 			"name": "Pets",
-			"item": []
+			"item": [
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/pets/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhY2QxYzY1YmJmZTFiYzQ2YWNlNTMiLCJpYXQiOjE3MzkyNDk5MDQsImV4cCI6MTczOTI1MzUwNH0.7fyUjzoVDHiOpfivyeCPRB_Wrq0y5mkspJdB8VOQrBU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Pipi\",\r\n    \"description\" : \"perro salchicha\",\r\n    \"age\" : \"1\",\r\n    \"type\" : \"perro\",\r\n    \"email\" : \"ecastillo@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/pets/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/pets/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/pets/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/pets/67aaa4e2b418bc486a388e8e",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhY2QxYzY1YmJmZTFiYzQ2YWNlNTMiLCJpYXQiOjE3MzkyNTAwNzUsImV4cCI6MTczOTI1MzY3NX0.l5wp6dZOUvXhPB1AXd0sBmQJVka1u1T-zBDv4S096zg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/pets/67aaa4e2b418bc486a388e8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pets",
+								"67aaa4e2b418bc486a388e8e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/pets/67aaa873b418bc486a388e9c",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhYTZmYmI0MThiYzQ4NmEzODhlOTIiLCJpYXQiOjE3MzkyMzkxMDMsImV4cCI6MTczOTI0MjcwM30.AgxP35pMnPBHk8N-p3Hqjdr0piNRUaA2AwNtHmsI4Rk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/pets/67aaa873b418bc486a388e9c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pets",
+								"67aaa873b418bc486a388e9c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/pets/activate/67aaa873b418bc486a388e9c",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhYTZmYmI0MThiYzQ4NmEzODhlOTIiLCJpYXQiOjE3MzkyNTA4NzcsImV4cCI6MTczOTI1NDQ3N30.SD3X2RZxB2qtzCZw0ECv7adW6U4WonAVLitJID0cCoc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/pets/activate/67aaa873b418bc486a388e9c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pets",
+								"activate",
+								"67aaa873b418bc486a388e9c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/pets/67aaa4e2b418bc486a388e8e",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMzgxYzRkNjNlNGI2MmYzMjZlNGEiLCJpYXQiOjE3MzkyNTE4MjAsImV4cCI6MTczOTI1NTQyMH0.sEfQ3urPUPWRT7yqvE6pZYYge0ayLpG0bG_7RInAzkQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Lana\",\r\n    \"description\" : \"blanca colocha\",\r\n    \"age\" : \"2\",\r\n    \"type\" : \"Pastora Aleman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/pets/67aaa4e2b418bc486a388e8e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"pets",
+								"67aaa4e2b418bc486a388e8e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/auth/register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Esdras\",\r\n    \"surname\" : \"Castillo\",\r\n    \"username\" : \"Ecastillo\",\r\n    \"email\" : \"Ecastillo@gmail.com\",\r\n    \"password\" : \"02020202\",\r\n    \"profilePicture\" : \"\",\r\n    \"phone\" : \"02020202\",\r\n    \"role\" : \"ADMIN_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/auth/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"pcastillo@gmail.com\",\r\n    \"password\" : \"02020202\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

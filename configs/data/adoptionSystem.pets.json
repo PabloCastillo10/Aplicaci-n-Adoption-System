@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "67aaa4e2b418bc486a388e8e"
+  },
+  "name": "Lana",
+  "description": "blanca colocha",
+  "age": 2,
+  "type": "Pastora Aleman",
+  "keeper": {
+    "$oid": "67aa381c4d63e4b62f326e4a"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-11T01:16:18.687Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T05:38:02.087Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aaa873b418bc486a388e9c"
+  },
+  "name": "Rider",
+  "description": "perro pug",
+  "age": 1,
+  "type": "perro",
+  "keeper": {
+    "$oid": "67aaa6fbb418bc486a388e92"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-11T01:31:31.112Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T05:16:28.239Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aad907f8e056ff517290ea"
+  },
+  "name": "Pipi",
+  "description": "perro salchicha",
+  "age": 1,
+  "type": "perro",
+  "keeper": {
+    "$oid": "67aacd1c65bbfe1bc46ace53"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-11T04:58:47.629Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-11T04:58:47.629Z"
+  }
+}]

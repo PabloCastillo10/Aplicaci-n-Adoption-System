@@ -101,3 +101,33 @@ export const deleteUser = async (req, res = response) => {
         })
     }
 }
+
+export const trueUser = async (req, res = response) => {
+    try {
+        const { id } = req.params;
+        const user = await User.findByIdAndUpdate(id, { estado: true }, { new: true });
+
+        if (!user) {
+            return res.status(404).json({
+                success: false,
+                msg: "Usuario no encontrado"
+            });
+        }
+
+        const authenticatedUser = req.usuario; 
+
+        res.status(200).json({
+            success: true,
+            msg: "Usuario activado",
+            user,
+            authenticatedUser
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            success: false,
+            msg: "Error al activar el usuario",
+            error
+        });
+    }
+};
