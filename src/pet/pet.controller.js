@@ -106,26 +106,40 @@ export const searchPet = async (req, res) => {
 }
 
 export const updatePet = async (req, res = response) => {
-
+ 
     try {
-
+ 
         const { id } = req.params;
-        const { _id, ...data } = req.body;
-
+        const { _id,  ...data } = req.body;
+        let { email } = req.body;
+ 
+        if(email) {
+            const user = await User.findOne({ email });
+ 
+            if (!user) {
+                return res.status(400).json({
+                    success: false,
+                    msg: 'Usuario con ese correo electrónico no encontrado',
+                });
+            }
+           
+            data.keeper = user._id;
+        }
+ 
         const pet = await Pet.findByIdAndUpdate(id, data, { new: true });
-
+ 
         res.status(200).json({
             success: true,
             msg: 'Mascota Actualizada',
             pet
         })
-
+ 
     } catch (error) {
         res.status(500).json({
             success: false,
             msg: 'Error al actualizar mascota',
             error
-        })   
+        })  
     }
 }
 
