@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "67ac1de12a68ea1dafdef6b1"
+  },
+  "fecha": "10/12/2007",
+  "user": {
+    "$oid": "67aa381c4d63e4b62f326e4a"
+  },
+  "pet": {
+    "$oid": "67aaa4e2b418bc486a388e8e"
+  },
+  "description": "Entrega de cachorita",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-12T04:04:49.884Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-12T04:04:49.884Z"
+  }
+}]

@@ -144,12 +144,12 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhY2QxYzY1YmJmZTFiYzQ2YWNlNTMiLCJpYXQiOjE3MzkyNDY4OTAsImV4cCI6MTczOTI1MDQ5MH0.QED-QmKWnPP6MOiACssa3R5VHWLHB2nPYRAxMmnHdJs",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMzgxYzRkNjNlNGI2MmYzMjZlNGEiLCJpYXQiOjE3MzkyODEyMjUsImV4cCI6MTczOTI4NDgyNX0.SVxdQeOmM50cz-x_-EMnjIu1e0Lnn9zLhoE935IrtAk",
 								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "http://localhost:8001/adoptionSystem/v1/users/activate/67aa381c4d63e4b62f326e4a",
+							"raw": "http://localhost:8001/adoptionSystem/v1/users/activate/67aa3bc04d63e4b62f326e65",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -160,6 +160,41 @@
 								"v1",
 								"users",
 								"activate",
+								"67aa3bc04d63e4b62f326e65"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/users/password/67aa381c4d63e4b62f326e4a",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"01010101\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/users/password/67aa381c4d63e4b62f326e4a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"users",
+								"password",
 								"67aa381c4d63e4b62f326e4a"
 							]
 						}
@@ -312,6 +347,15 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://localhost:8001/adoptionSystem/v1/pets/activate/67aaa873b418bc486a388e9c",
 							"protocol": "http",
@@ -340,13 +384,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMzgxYzRkNjNlNGI2MmYzMjZlNGEiLCJpYXQiOjE3MzkyNTE4MjAsImV4cCI6MTczOTI1NTQyMH0.sEfQ3urPUPWRT7yqvE6pZYYge0ayLpG0bG_7RInAzkQ",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMzgxYzRkNjNlNGI2MmYzMjZlNGEiLCJpYXQiOjE3MzkyODY3NTYsImV4cCI6MTczOTI5MDM1Nn0.rLl7YrMxa5M7Ds0bzHlP5MyY8pv5POj0-9Vh6hUuSD4",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Lana\",\r\n    \"description\" : \"blanca colocha\",\r\n    \"age\" : \"2\",\r\n    \"type\" : \"Pastora Aleman\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Lana\",\r\n    \"description\" : \"blanca colocha\",\r\n    \"age\" : \"4\",\r\n    \"type\" : \"Pastora Aleman\",\r\n    \"email\" : \"cacortez@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -416,10 +460,16 @@
 							"type": "noauth"
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FhMzgxYzRkNjNlNGI2MmYzMjZlNGEiLCJpYXQiOjE3MzkyODc2OTQsImV4cCI6MTczOTI5MTI5NH0.TE5wzIG_UPRr1CzHPTRbn6f4Ksp70GDXZ5XksW91fOU",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"pcastillo@gmail.com\",\r\n    \"password\" : \"02020202\"\r\n}",
+							"raw": "{\r\n    \"email\" : \"pcastillo@gmail.com\",\r\n    \"password\" : \"01010101\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -438,6 +488,45 @@
 								"v1",
 								"auth",
 								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Citas",
+			"item": [
+				{
+					"name": "http://localhost:8001/adoptionSystem/v1/citas/",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Lana\",\r\n    \"description\" : \"Entrega de cachorita\",\r\n    \"fecha\" : \"10/12/2007\",\r\n    \"email\" : \"pcastillo@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/adoptionSystem/v1/citas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"adoptionSystem",
+								"v1",
+								"citas",
+								""
 							]
 						}
 					},
